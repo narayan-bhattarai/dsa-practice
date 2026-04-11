@@ -9,7 +9,9 @@ function TreeNode(val, left, right) {
 var maxDepth = function(root) {
     if (!root) return 0;
     const leftDepth = maxDepth(root.left);
+    console.log(`Left depth of node with value ${root.val} is:`, leftDepth);
     const rightDepth = maxDepth(root.right);
+    console.log(`Right depth of node with value ${root.val} is:`, rightDepth);
     return 1 + Math.max(leftDepth, rightDepth);
 };
 
